@@ -8,9 +8,9 @@ import {
   TextField,
   MenuItem,
 } from "@mui/material";
-import {makeStyles} from "@mui/styles"
+// import {makeStyles} from "@mui/styles"
 import axios from "axios";
-import {MuiChipsInput}  from "mui-chips-input";
+import { MuiChipsInput } from "mui-chips-input";
 
 import { SetPopupContext } from "../../App";
 
@@ -100,7 +100,9 @@ const CreateJobs = (props) => {
         style={{ padding: "30px", minHeight: "93vh", width: "" }}
       >
         <Grid item>
-          <Typography variant="h2" style={{marginTop:"50px"}}>Add Job</Typography>
+          <Typography variant="h2" style={{ marginTop: "50px" }}>
+            Add Job
+          </Typography>
         </Grid>
         <Grid item container xs direction="column" justify="center">
           <Grid item>
@@ -122,7 +124,7 @@ const CreateJobs = (props) => {
               >
                 <Grid item>
                   <TextField
-                  style={{width:"400px"}}
+                    style={{ width: "400px" }}
                     label="Title"
                     value={jobDetails.title}
                     onChange={(event) =>
@@ -132,9 +134,9 @@ const CreateJobs = (props) => {
                     fullWidth
                   />
                 </Grid>
-                <Grid item >
-                  <MuiChipsInput 
-                    style={{width:"400px"}}
+                <Grid item>
+                  <MuiChipsInput
+                    style={{ width: "400px" }}
                     label="Skills"
                     variant="outlined"
                     helperText="Press enter to add skills"
@@ -158,7 +160,7 @@ const CreateJobs = (props) => {
                 </Grid>
                 <Grid item>
                   <TextField
-                  style={{width:"400px"}}
+                    style={{ width: "400px" }}
                     select
                     label="Job Type"
                     variant="outlined"
@@ -175,7 +177,7 @@ const CreateJobs = (props) => {
                 </Grid>
                 <Grid item>
                   <TextField
-                  style={{width:"400px"}}
+                    style={{ width: "400px" }}
                     select
                     label="Duration"
                     variant="outlined"
@@ -196,7 +198,7 @@ const CreateJobs = (props) => {
                 </Grid>
                 <Grid item>
                   <TextField
-                  style={{width:"400px"}}
+                    style={{ width: "400px" }}
                     label="Salary"
                     type="number"
                     variant="outlined"
@@ -210,7 +212,7 @@ const CreateJobs = (props) => {
                 </Grid>
                 <Grid item>
                   <TextField
-                  style={{width:"400px"}}
+                    style={{ width: "400px" }}
                     label="Application Deadline"
                     type="datetime-local"
                     value={jobDetails.deadline}
@@ -226,7 +228,7 @@ const CreateJobs = (props) => {
                 </Grid>
                 <Grid item>
                   <TextField
-                  style={{width:"400px"}}
+                    style={{ width: "400px" }}
                     label="Maximum Number Of Applicants"
                     type="number"
                     variant="outlined"
@@ -240,7 +242,7 @@ const CreateJobs = (props) => {
                 </Grid>
                 <Grid item>
                   <TextField
-                  style={{width:"400px"}}
+                    style={{ width: "400px" }}
                     label="Positions Available"
                     type="number"
                     variant="outlined"

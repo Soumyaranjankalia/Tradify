@@ -16,8 +16,7 @@ import {
   Checkbox,
   Avatar,
 } from "@mui/material";
-import { makeStyles } from "@mui/styles";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 import Rating from "@mui/material/Rating";
 import axios from "axios";
 import FilterListIcon from "@mui/icons-material/FilterList";
@@ -62,8 +61,16 @@ const FilterPopup = (props) => {
   // const classes = useStyles();
   const { open, handleClose, searchOptions, setSearchOptions, getData } = props;
   return (
-    <Modal open={open} onClose={handleClose} 
-    // className={classes.popupDialog}
+    <Modal
+      open={open}
+      onClose={handleClose}
+      // className={classes.popupDialog}
+      style={{
+        height: "100%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
     >
       <Paper
         style={{
@@ -73,79 +80,6 @@ const FilterPopup = (props) => {
         }}
       >
         <Grid container direction="column" alignItems="center" spacing={3}>
-          {/* <Grid container item alignItems="center">
-            <Grid item xs={3}>
-              Application Status
-            </Grid>
-            <Grid
-              container
-              item
-              xs={9}
-              justify="space-around"
-              // alignItems="center"
-            >
-              <Grid item>
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      name="rejected"
-                      checked={searchOptions.status.rejected}
-                      onChange={(event) => {
-                        setSearchOptions({
-                          ...searchOptions,
-                          status: {
-                            ...searchOptions.status,
-                            [event.target.name]: event.target.checked,
-                          },
-                        });
-                      }}
-                    />
-                  }
-                  label="Rejected"
-                />
-              </Grid>
-              <Grid item>
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      name="applied"
-                      checked={searchOptions.status.applied}
-                      onChange={(event) => {
-                        setSearchOptions({
-                          ...searchOptions,
-                          status: {
-                            ...searchOptions.status,
-                            [event.target.name]: event.target.checked,
-                          },
-                        });
-                      }}
-                    />
-                  }
-                  label="Applied"
-                />
-              </Grid>
-              <Grid item>
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      name="shortlisted"
-                      checked={searchOptions.status.shortlisted}
-                      onChange={(event) => {
-                        setSearchOptions({
-                          ...searchOptions,
-                          status: {
-                            ...searchOptions.status,
-                            [event.target.name]: event.target.checked,
-                          },
-                        });
-                      }}
-                    />
-                  }
-                  label="Shortlisted"
-                />
-              </Grid>
-            </Grid>
-          </Grid> */}
           <Grid container item alignItems="center">
             <Grid item xs={3}>
               Sort
@@ -525,9 +459,15 @@ const ApplicationTile = (props) => {
   };
 
   return (
-    <Paper 
-    // className={classes.jobTileOuter} 
-    elevation={3}>
+    <Paper
+      style={{
+        padding: "30px",
+        margin: "20px 0",
+        boxSizing: "border-box",
+        width: "100%",
+      }}
+      elevation={3}
+    >
       <Grid container>
         <Grid
           item
@@ -540,7 +480,7 @@ const ApplicationTile = (props) => {
         >
           <Avatar
             src={`${server}${application.jobApplicant.profile}`}
-            // className={classes.avatar}
+            style={{ width: theme.spacing(17), height: theme.spacing(17) }}
           />
         </Grid>
         <Grid container item xs={7} spacing={1} direction="column">
@@ -583,13 +523,17 @@ const ApplicationTile = (props) => {
             </Button>
           </Grid>
           <Grid item container xs>
-            {/* {buttonSet[application.status]} */}
             <Button
               variant="contained"
               color="primary"
-              // className={classes.statusBlock}
               style={{
                 background: "#09BC8A",
+                width: "100%",
+                height: "100%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                textTransform: "uppercase",
               }}
               onClick={() => {
                 setOpenEndJob(true);
@@ -602,7 +546,14 @@ const ApplicationTile = (props) => {
             <Button
               variant="contained"
               color="primary"
-              // className={classes.statusBlock}
+              style={{
+                width: "100%",
+                height: "100%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                textTransform: "uppercase",
+              }}
               onClick={() => {
                 setOpen(true);
               }}
@@ -612,8 +563,10 @@ const ApplicationTile = (props) => {
           </Grid>
         </Grid>
       </Grid>
-      <Modal open={open} onClose={handleClose} 
-      // className={classes.popupDialog}
+      <Modal
+        open={open}
+        onClose={handleClose}
+        // className={classes.popupDialog}
       >
         <Paper
           style={{

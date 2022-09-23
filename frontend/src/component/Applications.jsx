@@ -15,15 +15,13 @@ import {
   MenuItem,
   Checkbox,
 } from "@mui/material";
-import { makeStyles } from "@mui/styles";
+// import { makeStyles } from "@mui/styles";
 import Rating from "@mui/material/Rating";
 import axios from "axios";
 
 import { SetPopupContext } from "../App";
 
 import apiList from "../lib/apiList";
-
-
 
 const ApplicationTile = (props) => {
   const { application } = props;

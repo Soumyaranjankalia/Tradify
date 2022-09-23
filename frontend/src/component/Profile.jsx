@@ -7,7 +7,6 @@ import {
   Paper,
   TextField,
 } from "@mui/material";
-import { makeStyles } from "@mui/styles";
 import axios from "axios";
 import { MuiChipsInput } from "mui-chips-input";
 import FileUploadInput from "../lib/FileUploadInput";
@@ -18,16 +17,13 @@ import { SetPopupContext } from "../App";
 
 import apiList from "../lib/apiList";
 
-
-
 const MultifieldInput = (props) => {
-  // const classes = useStyles();
   const { education, setEducation } = props;
 
   return (
     <>
       {education.map((obj, key) => (
-        <Grid item container  key={key}>
+        <Grid item container key={key}>
           <Grid item xs={6}>
             <TextField
               label={`Institution Name #${key + 1}`}

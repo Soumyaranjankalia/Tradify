@@ -8,7 +8,7 @@ const Welcome = (props) => {
       direction="column"
       alignItems="center"
       justify="center"
-      style={{ padding: "30px", minHeight: "93vh", marginTop:"100px" }}
+      style={{ padding: "30px", minHeight: "93vh", marginTop: "100px" }}
     >
       <Grid item>
         <Typography variant="h2">Welcome to Job Portal</Typography>

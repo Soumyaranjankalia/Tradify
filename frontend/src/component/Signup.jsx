@@ -9,10 +9,10 @@ import {
   Input,
 } from "@mui/material";
 import axios from "axios";
-import { Navigate  } from "react-router-dom";
-import {MuiChipsInput}  from "mui-chips-input";
-import DescriptionIcon from '@mui/icons-material/Description';
-import FaceIcon from '@mui/icons-material/Face';
+import { Navigate } from "react-router-dom";
+import { MuiChipsInput } from "mui-chips-input";
+import DescriptionIcon from "@mui/icons-material/Description";
+import FaceIcon from "@mui/icons-material/Face";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/material.css";
 import PasswordInput from "../lib/PasswordInput";
@@ -33,7 +33,7 @@ const MultifieldInput = (props) => {
           item
           container
           key={key}
-          style={{ paddingLeft: 0, paddingRight: 0 , width: "400px" }}
+          style={{ paddingLeft: 0, paddingRight: 0, width: "400px" }}
         >
           <Grid item xs={6}>
             <TextField
@@ -89,8 +89,7 @@ const MultifieldInput = (props) => {
               },
             ])
           }
-          style={{width: "400px"}}
-          
+          style={{ width: "400px" }}
         >
           Add another institution details
         </Button>
@@ -305,11 +304,9 @@ const Login = (props) => {
   };
 
   return loggedin ? (
-    <Navigate  to="/" />
+    <Navigate to="/" />
   ) : (
-    <Paper elevation={3} 
-    style={{padding: "60px 60px"}}
-    >
+    <Paper elevation={3} style={{ padding: "60px 60px" }}>
       <Grid container direction="column" spacing={4} alignItems="center">
         <Grid item>
           <Typography variant="h3" component="h2">
@@ -321,7 +318,7 @@ const Login = (props) => {
             select
             label="Category"
             variant="outlined"
-            style={{width:"400px"}}
+            style={{ width: "400px" }}
             value={signupDetails.type}
             onChange={(event) => {
               handleInput("type", event.target.value);
@@ -336,7 +333,7 @@ const Login = (props) => {
             label="Name"
             value={signupDetails.name}
             onChange={(event) => handleInput("name", event.target.value)}
-            style={{width:"400px"}}
+            style={{ width: "400px" }}
             error={inputErrorHandler.name.error}
             helperText={inputErrorHandler.name.message}
             onBlur={(event) => {
@@ -356,16 +353,16 @@ const Login = (props) => {
             onChange={(event) => handleInput("email", event.target.value)}
             inputErrorHandler={inputErrorHandler}
             handleInputError={handleInputError}
-            style={{width:"400px"}}
+            style={{ width: "400px" }}
             required={true}
           />
         </Grid>
-        <Grid item >
+        <Grid item>
           <PasswordInput
             label="Password"
             value={signupDetails.password}
             onChange={(event) => handleInput("password", event.target.value)}
-            style={{width:"400px"}}
+            style={{ width: "400px" }}
             error={inputErrorHandler.password.error}
             helperText={inputErrorHandler.password.message}
             onBlur={(event) => {
@@ -384,8 +381,8 @@ const Login = (props) => {
               setEducation={setEducation}
             />
             <Grid item>
-              <MuiChipsInput 
-                style={{width:"400px"}}
+              <MuiChipsInput
+                style={{ width: "400px" }}
                 label="Skills"
                 variant="outlined"
                 helperText="Press enter to add skills"
@@ -396,7 +393,7 @@ const Login = (props) => {
             </Grid>
             <Grid item>
               <FileUploadInput
-                style={{width:"400px"}}
+                style={{ width: "400px" }}
                 label="Resume (.pdf)"
                 icon={<DescriptionIcon />}
                 uploadTo={apiList.uploadResume}
@@ -406,7 +403,7 @@ const Login = (props) => {
             </Grid>
             <Grid item>
               <FileUploadInput
-                style={{width:"400px"}}
+                style={{ width: "400px" }}
                 label="Profile Photo (.jpg/.png)"
                 icon={<FaceIcon />}
                 uploadTo={apiList.uploadProfileImage}
@@ -455,7 +452,7 @@ const Login = (props) => {
                 ? handleLogin()
                 : handleLoginRecruiter();
             }}
-            style={{width:"400px"}}
+            style={{ width: "400px" }}
           >
             Signup
           </Button>

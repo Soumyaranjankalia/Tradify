@@ -6,7 +6,6 @@ import {
   Typography,
   Paper,
 } from "@mui/material";
-import {makeStyles} from "@mui/styles"
 import axios from "axios";
 import { Navigate  } from "react-router-dom";
 
@@ -17,20 +16,7 @@ import { SetPopupContext } from "../App";
 import apiList from "../lib/apiList";
 import isAuth from "../lib/isAuth";
 
-// const useStyles = makeStyles((theme) => ({
-//   body: {
-//     padding: "60px 60px",
-//   },
-//   inputBox: {
-//     width: "300px",
-//   },
-//   submitButton: {
-//     width: "300px",
-//   },
-// }));
-
 const Login = (props) => {
-  // const classes = useStyles();
   const setPopup = useContext(SetPopupContext);
 
   const [loggedin, setLoggedin] = useState(isAuth());

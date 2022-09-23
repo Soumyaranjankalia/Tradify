@@ -16,7 +16,7 @@ import {
   Checkbox,
   Avatar,
 } from "@mui/material";
-import {makeStyles} from "@mui/styles"
+// import {makeStyles} from "@mui/styles"
 import { useParams } from "react-router-dom";
 import Rating from "@mui/material/Rating";
 import axios from "axios";

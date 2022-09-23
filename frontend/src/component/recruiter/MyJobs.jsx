@@ -15,10 +15,10 @@ import {
   MenuItem,
   Checkbox,
 } from "@mui/material";
-import {makeStyles} from "@mui/styles"
+// import {makeStyles} from "@mui/styles"
 import { useNavigate  } from "react-router-dom";
 import Rating from "@mui/material/Rating";
-import Pagination from "@mui/material/Pagination";
+// import Pagination from "@mui/material/Pagination";
 import axios from "axios";
 import SearchIcon from "@mui/icons-material/Search";
 import FilterListIcon from "@mui/icons-material/FilterList";
